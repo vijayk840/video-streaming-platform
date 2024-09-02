@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="js/navbar.js" defer></script>
+</head>
+
+<body>
+  <div id="navbar-container"></div>
+
+  <div class="container mt-4">
+    <h1 class="mb-4">Register</h1>
+    <form id="registerForm">
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="example@example.com" required>
+        <small class="form-text text-muted">Please enter a valid email address.</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/register.js" defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (localStorage.getItem('authToken')) {
+        window.location.href = 'index.html'; // Redirect if already logged in
+      }
+    });
+  </script>
+</body>
+
+</html>
