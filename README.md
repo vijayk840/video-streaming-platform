@@ -1,8 +1,10 @@
 Adaptive Bitrate Video Streaming Platform with Transcoding
 
-This project has three microservices -  Upload Service, Transcode Service, and Watch Service
+This project has three microservices -  Upload Service, Transcode Service, and Watch Service and one client
 
-Upload Service: Utilized Amazon S3’s multipart upload to efficiently upload video files in chunks, Stored
+-client - client gives the option to upload the video ,it divides the video into multiple chunks and make the post request to upload service.
+
+-Upload Service: Utilized Amazon S3’s multipart upload to efficiently upload video files in chunks, Stored
 video metadata in MySQL and published events to Kafka for processing.
 
 – Transcode Service: Implemented Kafka to receive events about uploaded videos from the Upload Service.
